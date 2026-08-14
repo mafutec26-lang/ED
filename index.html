@@ -757,446 +757,390 @@ _stq.push([ "clickTrackerInit", "254774664", "345" ]);
 			})();
 		</script>
 			
-<!-- =====================================================
-     POPUP
-===================================================== -->
 
-<div id="vslExitPopup">
-
-  <div class="vsl-popup-box">
+</script>
 
 
-    <!-- FECHAR -->
+<!-- POPUP DE ABANDONO -->
+<div id="exitPopup" class="exit-overlay">
 
-    <button
-      type="button"
-      class="vsl-popup-close"
-      id="vslPopupClose"
-      aria-label="Fechar popup">
+  <div class="exit-popup">
 
-      ×
+    <button class="exit-close" id="closePopup">×</button>
 
-    </button>
-
-
-    <!-- ÍCONE -->
-
-    <div class="vsl-popup-icon">
-
-      ▶
-
-    </div>
-
-
-    <!-- TÍTULO -->
+    <div class="popup-icon">⚠️</div>
 
     <h2>
-
-      🔥 DEPOIS DESTE VÍDEO, VOCÊ NÃO SERÁ O MESMO...
-
+      ESPERE UM MOMENTO!
     </h2>
 
-
-    <!-- TEXTO -->
-
-    <p>
-
-      A Dra. revela uma abordagem que pode ajudar você a melhorar 
-	  o desempenho e aumentar o tamanho do teu Penis,
-      e fazer ela implorar por mais uma noite de sexo contigo...
-
+    <p class="popup-highlight">
+      Talvez esta seja a última esta oportunidade.
     </p>
 
+    <p class="popup-text">
+      Nao perca a oportunidade de ter um Penis grande e grosso 
+      que realmente deixa ela satisfeita, esta oportunidade e unica se saires 
+      agora sem concluir o acesso da receita nao voltara a ver esta pagina.
+      Seu acesso pode ser concluído em poucos passos.
+    </p>
 
-    <!-- CTA -->
+    <a
+      href="https://pay.zenofy.io/p/6a74fe6a480d9186ed40daff"
+      class="popup-button"
+      id="popupCheckout"
+    >
+      CONTINUAR E TER ACESSO →
+    </a>
 
-    <button
-      type="button"
-      class="vsl-popup-button"
-      id="vslContinueButton">
-
-      ▶ CONTINUAR ASSISTINDO
-
+    <button class="continue-leaving" id="leavePage">
+      Prefiro sair 
     </button>
-
-
-    <!-- NOTA -->
-
-    <div class="vsl-popup-note">
-
-      A apresentação continuará de onde você parou.
-
-    </div>
-
 
   </div>
 
 </div>
 
 
+<style>
+
+/* FUNDO */
+
+.exit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.72);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  z-index: 999999;
+
+  animation: fadeIn .2s ease;
+}
+
+
+/* POPUP */
+
+.exit-popup {
+  position: relative;
+
+  width: 100%;
+  max-width: 380px;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 25px 20px 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.30);
+
+  animation: popupIn .3s ease;
+}
+
+
+/* ÍCONE */
+
+.popup-icon {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+
+/* TÍTULO */
+
+.exit-popup h2 {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 23px;
+
+  line-height: 1.1;
+
+  color: #171717;
+
+  margin-bottom: 9px;
+}
+
+
+/* DESTAQUE */
+
+.popup-highlight {
+  font-size: 16px;
+
+  font-weight: 800;
+
+  color: #d71919;
+
+  margin-bottom: 8px;
+}
+
+
+/* TEXTO */
+
+.popup-text {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.45;
+
+  color: #555;
+
+  margin-bottom: 17px;
+}
+
+
+/* BOTÃO */
+
+.popup-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 14px 12px;
+
+  border-radius: 12px;
+
+  background: #e52323;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(229,35,35,.35);
+
+  animation: buttonPulse 1.8s infinite;
+}
+
+
+/* FECHAR */
+
+.exit-close {
+  position: absolute;
+
+  top: 8px;
+  right: 10px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  background: #f1f1f1;
+
+  border-radius: 50%;
+
+  font-size: 23px;
+
+  line-height: 32px;
+
+  color: #666;
+
+  cursor: pointer;
+}
+
+
+/* SAIR */
+
+.continue-leaving {
+  margin-top: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #888;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+@keyframes popupIn {
+
+  from {
+    opacity: 0;
+    transform: scale(.92) translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+}
+
+@keyframes buttonPulse {
+
+  0% {
+    transform: scale(1);
+
+    box-shadow:
+      0 6px 18px rgba(229,35,35,.35);
+  }
+
+  50% {
+    transform: scale(1.025);
+
+    box-shadow:
+      0 8px 25px rgba(229,35,35,.55);
+  }
+
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 6px 18px rgba(229,35,35,.35);
+  }
+
+}
+
+</style>
+
+
 <script>
 
 (function () {
 
-  "use strict";
-
-
-  /* =====================================================
-     ELEMENTOS
-  ===================================================== */
-
-  const popup =
-    document.getElementById(
-      "vslExitPopup"
-    );
-
-  const closeButton =
-    document.getElementById(
-      "vslPopupClose"
-    );
-
-  const continueButton =
-    document.getElementById(
-      "vslContinueButton"
-    );
-
-
-  /* =====================================================
-     CONFIGURAÇÃO
-  ===================================================== */
+  const popup = document.getElementById("exitPopup");
+  const closeBtn = document.getElementById("closePopup");
+  const leaveBtn = document.getElementById("leavePage");
+  const popupCheckout = document.getElementById("popupCheckout");
 
   /*
-     Coloque id="vsl" na seção que contém
-     sua VSL.
+   * Verifica se o popup já apareceu nesta sessão.
+   */
 
-     Exemplo:
-
-     <div id="vsl">
-
-       SUA VSL
-
-     </div>
-  */
-
-  const VSL_SELECTOR = "#vsl";
+  if (sessionStorage.getItem("exitPopupShown") === "1") {
+    return;
+  }
 
 
   /*
-     Nome usado para lembrar que
-     o popup já apareceu.
+   * Detecta tentativa de voltar no Android/mobile.
+   */
 
-     sessionStorage = apenas durante
-     a sessão atual.
-  */
+  history.pushState(null, "", location.href);
 
-  const SESSION_KEY =
-    "vsl_exit_popup_already_shown";
+  window.addEventListener("popstate", function () {
 
+    showPopup();
 
-  /* =====================================================
-     CONTROLE
-  ===================================================== */
+    history.pushState(null, "", location.href);
 
-  let popupShown = false;
+  });
 
 
-  /* =====================================================
-     MOSTRAR POPUP
-  ===================================================== */
+  /*
+   * Detecta tentativa de fechar/recarregar
+   * usando beforeunload.
+   *
+   * Alguns navegadores limitam esse tipo
+   * de popup, por isso o popstate é o principal.
+   */
+
+  let exitDetected = false;
+
+  document.addEventListener("mouseleave", function (event) {
+
+    if (
+      event.clientY <= 5 &&
+      window.innerWidth > 768 &&
+      !exitDetected
+    ) {
+
+      exitDetected = true;
+
+      showPopup();
+
+    }
+
+  });
+
 
   function showPopup() {
 
-
-    /*
-       Se já apareceu nesta página,
-       não mostrar novamente.
-    */
-
-    if (popupShown) {
-
-      return;
-
-    }
-
-
-    /*
-       Se já apareceu nesta sessão,
-       não mostrar novamente.
-    */
-
     if (
-      sessionStorage.getItem(
-        SESSION_KEY
-      ) === "true"
+      sessionStorage.getItem("exitPopupShown") === "1"
     ) {
-
       return;
-
     }
-
-
-    /*
-       Marcar imediatamente.
-
-       Isso impede disparos duplicados.
-    */
-
-    popupShown = true;
 
     sessionStorage.setItem(
-      SESSION_KEY,
-      "true"
+      "exitPopupShown",
+      "1"
     );
 
+    popup.style.display = "flex";
 
-    popup.classList.add(
-      "show"
-    );
+    document.body.style.overflow = "hidden";
 
   }
 
 
-  /* =====================================================
-     FECHAR POPUP
-  ===================================================== */
+  function closePopupFunction() {
 
-  function closePopup() {
+    popup.style.display = "none";
 
-    popup.classList.remove(
-      "show"
-    );
+    document.body.style.overflow = "";
 
   }
 
 
-  /* =====================================================
-     PC
-     
-     EXIT INTENT
-===================================================== */
-
-  document.addEventListener(
-    "mouseout",
-    function (event) {
-
-
-      /*
-         No mobile não executar
-         esta lógica.
-      */
-
-      if (
-        window.innerWidth <= 768
-      ) {
-
-        return;
-
-      }
-
-
-      /*
-         Detecta o cursor saindo
-         pelo topo da página.
-      */
-
-      if (
-
-        event.clientY <= 5 &&
-
-        event.relatedTarget === null
-
-      ) {
-
-        showPopup();
-
-      }
-
-    }
+  closeBtn.addEventListener(
+    "click",
+    closePopupFunction
   );
 
 
-  /* =====================================================
-     MOBILE
-     
-     SOMENTE TENTATIVA DE VOLTAR
-===================================================== */
-
-  if (
-    window.innerWidth <= 768
-  ) {
+  leaveBtn.addEventListener(
+    "click",
+    closePopupFunction
+  );
 
 
-    /*
-       Adiciona uma entrada temporária
-       no histórico.
+  /*
+   * Se clicar para continuar,
+   * registra que voltou ao checkout.
+   */
 
-       Isso permite detectar o gesto
-       ou botão "Voltar".
-    */
+  popupCheckout.addEventListener(
+    "click",
+    function () {
 
-    try {
-
-      history.pushState(
-        {
-          vslExitProtection: true
-        },
-        "",
-        window.location.href
+      sessionStorage.setItem(
+        "checkoutFromPopup",
+        "1"
       );
-
-
-    } catch (error) {
-
-      /*
-         Se o navegador não permitir,
-         simplesmente não fazemos nada.
-
-         Não interfere no funil.
-      */
-
-    }
-
-
-    /*
-       Detectar "Voltar".
-    */
-
-    window.addEventListener(
-      "popstate",
-      function () {
-
-
-        /*
-           Se o popup já apareceu,
-           não fazer absolutamente nada.
-
-           Isso garante 1x por sessão.
-        */
-
-        if (popupShown) {
-
-          return;
-
-        }
-
-
-        /*
-           Mostrar popup.
-        */
-
-        showPopup();
-
-
-        /*
-           Colocar novamente a página
-           no histórico.
-
-           Assim a primeira tentativa
-           de voltar é interceptada.
-        */
-
-        try {
-
-          history.pushState(
-            {
-              vslExitProtection: true
-            },
-            "",
-            window.location.href
-          );
-
-        } catch (error) {
-
-          /*
-             Não interferir se houver
-             alguma restrição do navegador.
-          */
-
-        }
-
-      }
-    );
-
-  }
-
-
-  /* =====================================================
-     CONTINUAR ASSISTINDO
-  ===================================================== */
-
-  continueButton.addEventListener(
-    "click",
-    function () {
-
-
-      /*
-         Fechar popup.
-      */
-
-      closePopup();
-
-
-      /*
-         Encontrar a VSL.
-      */
-
-      const vsl =
-        document.querySelector(
-          VSL_SELECTOR
-        );
-
-
-      if (vsl) {
-
-
-        /*
-           Voltar para a VSL.
-        */
-
-        vsl.scrollIntoView({
-
-          behavior: "smooth",
-
-          block: "center"
-
-        });
-
-      }
-
-    }
-  );
-
-
-  /* =====================================================
-     FECHAR NO X
-  ===================================================== */
-
-  closeButton.addEventListener(
-    "click",
-    function () {
-
-      closePopup();
-
-    }
-  );
-
-
-  /* =====================================================
-     CLICAR FORA
-  ===================================================== */
-
-  popup.addEventListener(
-    "click",
-    function (event) {
-
-
-      if (
-        event.target === popup
-      ) {
-
-        closePopup();
-
-      }
 
     }
   );
@@ -1205,9 +1149,6 @@ _stq.push([ "clickTrackerInit", "254774664", "345" ]);
 })();
 
 </script>
-
-
-
 
 
 </body></html><!-- Page cached by LiteSpeed Cache 7.8.1 on 2026-07-02 18:57:34 -->
